@@ -1,0 +1,6 @@
+<div class="rounded bg-white mt-5 shadow text-center p-4">
+  <h3 class="font-weight-bold"><%= note.title %><h3>
+  <p class="font-weight-light">created by: <%= note.user.username %>, <%= note.created_at.strftime("%a %I:%M") %><p>
+  <%= link_to 'Edit Note', edit_note_path(note) %> | <%= link_to 'Delete Note', note, method: :delete, data: { confirm: "Are you sure?" } %>
+  <p class="font-weight-regular text-justify"><%= note.body %></p>
+<div>

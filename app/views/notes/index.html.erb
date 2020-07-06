@@ -1,0 +1,13 @@
+<h1>Notes</h1>
+
+<% if @notes.empty? %>
+  <p>Oh no! You have no notes! <%= link_to 'click here', new_note_path %> to create your first note.</p>
+<% end %>
+
+<ul>
+  <% @notes.each do |note| %>
+    <li class="list-unstyled">
+      <%= render 'note', note: note %>
+    </li>
+  <% end %>
+</ul>

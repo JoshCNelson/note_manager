@@ -1,0 +1,13 @@
+<h1>Welcome!</h1>
+<% if current_user %>
+  <p><%= current_user.username %></p>
+  <p>
+    <%= link_to 'visit note dashboard', notes_path %>
+  </p>
+<% else %>
+  <p>
+    To use this application please
+    <%= link_to 'sign up', login_path %> or
+    <%= link_to 'log in', login_path %>
+  </p>
+<% end %>

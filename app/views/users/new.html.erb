@@ -1,0 +1,14 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="text-center">
+  <%= form_with model: @user, class: "form-signin", local: true do |f| %>
+    <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+    <%= f.label :username, class: "sr-only" %>
+    <%= f.text_field :username, placeholder: "Username", class: "form-control" %>
+    <%= f.label :email, class: "sr-only" %>
+    <%= f.text_field :email, placeholder: "Email address", class: "form-control" %>
+    <%= f.label :password, class: "sr-only" %>
+    <%= f.text_field :password, placeholder: "Password", class: "form-control" %>
+    <%= f.submit "Create User", class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+<div>

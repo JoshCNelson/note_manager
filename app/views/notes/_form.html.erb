@@ -1,0 +1,12 @@
+<%= render 'shared/errors', obj: note %>
+
+<div class="text-center">
+  <%= form_with model: note, class: "form-signin", local: true do |f| %>
+    <h1 class="h3 mb-3 font-weight-normal"><%= note.new_record? ? 'Create Note' : 'Edit Note' %></h1>
+    <%= f.label :title, class: "sr-only" %>
+    <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+    <%= f.label :body, class: "sr-only" %>
+    <%= f.text_area :body, placeholder: "Body", class: "form-control" %>
+    <%= f.submit note.new_record? ? 'Create Note' : 'Update Note', class: "btn btn-lg btn-primary btn-block" %>
+  <% end %>
+<div>
